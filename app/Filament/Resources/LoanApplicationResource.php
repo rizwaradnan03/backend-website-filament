@@ -25,10 +25,10 @@ class LoanApplicationResource extends Resource
 
     public static function form(Form $form): Form
     {
-        $companyId = auth();
-        echo "<pre>";
-        print_r($companyId);die;
-        $loans = Loan::where('company_id', $companyId)->get();
+    //     $companyId = auth()``;
+    //     echo "<pre>";
+    //     print_r($companyId);die;
+    //     $loans = Loan::where('company_id', $companyId)->get();
 
         return $form
             ->schema([

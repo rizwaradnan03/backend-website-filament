@@ -1,5 +1,5 @@
 <?php
-namespace App\Filament\Pages\Tenancy;
+namespace App\Filament\App\Pages\Tenancy;
 
 use App\Models\Company;
 use App\Models\Team;

@@ -58,8 +58,6 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ])->tenant(Company::class, ownershipRelationship: 'company', slugAttribute: 'slug')
-            ->tenantRegistration(RegisterCompany::class)
-            ->tenantProfile(EditCompanyProfile::class);
+            ]);
     }
 }

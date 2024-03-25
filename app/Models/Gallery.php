@@ -13,7 +13,7 @@ class Gallery extends Model
         'company_id', 'image'
     ];
 
-    public function company(): BelongsTo{
+    public function Company(): BelongsTo{
         return $this->belongsTo(Company::class);
     }
 

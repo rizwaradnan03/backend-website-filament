@@ -32,7 +32,7 @@ class Company extends Model
         return $this->hasMany(BlogCategory::class);
     }
 
-    public function Blog(): HasMany{
+    public function Blogs(): HasMany{
         return $this->hasMany(Blog::class);
     }
 
@@ -48,8 +48,32 @@ class Company extends Model
         return $this->hasMany(Deposit::class);
     }
 
+    public function Savings(): HasMany{
+        return $this->hasMany(Saving::class);
+    }
+
     public function LoanApplications(): HasMany{
         return $this->hasMany(LoanApplication::class);
+    }
+
+    public function DepositApplications(): HasMany{
+        return $this->hasMany(DepositApplication::class);
+    }
+
+    public function SavingApplications(): HasMany{
+        return $this->hasMany(SavingApplication::class);
+    }
+
+    public function FinancialStatement(): HasMany{
+        return $this->hasMany(FinancialStatement::class);
+    }
+
+    public function GlimpseAbout(): HasMany{
+        return $this->hasMany(GlimpseAbout::class);
+    }
+
+    public function GlimpseAboutComponent(): HasMany{
+        return $this->hasMany(GlimpseAboutComponent::class);
     }
 
     public function members(): BelongsToMany{

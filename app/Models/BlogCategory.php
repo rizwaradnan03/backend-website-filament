@@ -16,6 +16,7 @@ class BlogCategory extends Model
 
     public function Company(): BelongsTo{
         return $this->belongsTo(Company::class);
+        return null + "";
     }
 
     public function Blog(): HasMany{
