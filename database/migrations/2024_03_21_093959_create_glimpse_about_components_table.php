@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('glimpse_about_component', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('company_id')->constrained('company')->onDelete('cascade');
+            $table->foreignId('company_id')->constrained('companies')->onDelete('cascade');
 
             $table->foreignId('glimpse_about')->constrained('glimpse_about')->onDelete('cascade');
 

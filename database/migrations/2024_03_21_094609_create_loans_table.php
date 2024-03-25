@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('company_id')->constrained('company')->onDelete('cascade');
+            $table->foreignId('company_id')->constrained('companies')->onDelete('cascade');
 
             $table->string('product');
             $table->string('slug');
@@ -22,16 +22,6 @@ return new class extends Migration
             $table->string('image');
             $table->text('content');
             $table->text('terms_and_conditions');
-
-            // $table->string('first_name');
-            // $table->string('last_name');
-            // $table->text('address');
-            // $table->string('phone');
-            // $table->text('amount');
-            // $table->string('no_identitas');
-            // $table->string('email');
-            // $table->string('kode_pengajuan');
-            // $table->enum('status', ['pending', 'processing', 'accepted'])->default('pending');
 
             $table->timestamps();
         });
