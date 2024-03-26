@@ -76,6 +76,10 @@ class Company extends Model
         return $this->hasMany(GlimpseAboutComponent::class);
     }
 
+    public function Carousels(): HasMany{
+        return $this->hasMany(Carousel::class);
+    }
+
     public function members(): BelongsToMany{
         return $this->belongsToMany(User::class);
     }
