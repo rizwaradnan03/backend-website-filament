@@ -20,6 +20,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Rupadana\ApiService\ApiServicePlugin;
 
 class AppPanelProvider extends PanelProvider
 {
@@ -57,6 +58,9 @@ class AppPanelProvider extends PanelProvider
                 Authenticate::class,
             ])->tenant(Company::class, ownershipRelationship: 'company', slugAttribute: 'slug')
             ->tenantRegistration(RegisterCompany::class)
-            ->tenantProfile(EditCompanyProfile::class);
+            ->tenantProfile(EditCompanyProfile::class)
+            ->plugins([
+                ApiServicePlugin::make()
+            ]);
     }
 }
